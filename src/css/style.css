@@ -1,0 +1,119 @@
+:root {
+    --border-radius: 20px;
+    --border: 0.25px solid rgb(255, 255, 255);
+    --shadow: 10px 10px 20px rgba(187, 187, 187, 0.4);
+
+    --font: 'Quicksand', 'sans-serif';
+    --font-size: 40pt;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font);
+
+    background-image: linear-gradient(
+        to bottom right,
+        #74ebd5 0%, 
+        #9face6 100%);
+}
+
+.mainContainer {
+    height: 100vh;
+    width:  80%;
+}
+
+header {
+    min-height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.searchElement {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    height: 2rem;
+    min-width: 20rem;
+    border: 1px solid rgb(127, 127, 127);
+    border-radius: 10px;
+
+    font-size: medium;
+    padding: 8px;
+}
+
+#btnSearch {
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1rem;
+    background-color: rgb(217, 0, 255);
+    border: var(--border);
+    border-radius: var(--border-radius);
+
+    cursor: pointer;
+}
+
+.informationContainer {
+    width: 100%;
+    height: 80%;
+
+    padding: 3rem 3rem 0 3rem;
+}
+
+.cityInfo {
+    width: 100% ;
+    height: 30%;
+
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.7));
+    box-shadow: var(--shadow);
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+
+.housingCard, .costOfLivingCard, .scoreCard {
+    width: 30%;
+    height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.9));
+    border: var(--border);
+    border-radius: var(--border-radius);
+
+    font-size: large;
+}
+
+.valueFontSize {
+    font-size: var(--font-size);
+}
