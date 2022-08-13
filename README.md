@@ -55,4 +55,4 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 Project repository: [Life Quality App](https://github.com/dpdproject/life_quality_project)
 
-Project website: [Life Quality App - Netlify](https://dpd-life-quality-app.netlify.app)
+Project website: [Life Quality App - Netlify](https://dpdproject-lifequalityapp.netlify.app)
