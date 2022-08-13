@@ -3,14 +3,16 @@
     <p>Search for a city to see its quality life scores</p>
 </p>
 
-<summary><h2>Contents</h2></summary>
-<ol>
-    <li><a href=#about-the-project>About the project</a><li>
-    <li><a  href=#built-with>Built with</a><li>
-    <li><a  href=#usage>Usage</a><li>
-    <li><a  href=#contributing>Contributing</a><li>
-    <li><a  href=#links-contacts>Links & Contacts</a><li>
-</ol>
+<details open="open">
+    <summary><h2>Contents</h2></summary>
+    <ul>
+        <li><a href=#about-the-project>About the project</a><li>
+        <li><a  href=#built-with>Built with</a><li>
+        <li><a  href=#usage>Usage</a><li>
+        <li><a  href=#contributing>Contributing</a><li>
+        <li><a  href=#links-contacts>Links & Contacts</a><li>
+    </ul>
+</details>
 
 ## About the Project
 
