@@ -34,6 +34,9 @@ brief description of the city itself.
 
 ## Usage
 
+The user can type the name of the city via search input. After the Teleport API datas have been fetched through a get axios request, the results will be displayed
+in the interface. 
+
 ## Contributing
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
