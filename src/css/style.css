@@ -22,8 +22,12 @@ body {
 
     background-image: linear-gradient(
         to bottom right,
-        #74ebd5 0%, 
+        #74ebd5 30%, 
         #9face6 100%);
+}
+
+.images {
+    max-height: 60%;
 }
 
 .mainContainer {
@@ -53,11 +57,15 @@ input {
     padding: 8px;
 }
 
+.mainTitle {
+    cursor: pointer;
+}
+
 #btnSearch {
     height: 2rem;
     width: 2rem;
     margin-left: 1rem;
-    background-color: rgb(217, 0, 255);
+    background-color: transparent;
     border: var(--border);
     border-radius: var(--border-radius);
 
@@ -66,7 +74,7 @@ input {
 
 .informationContainer {
     width: 100%;
-    height: 80%;
+    height: 50rem;
 
     padding: 3rem 3rem 0 3rem;
 }
@@ -89,13 +97,17 @@ input {
     border-radius: var(--border-radius);
 }
 
+.appTitle {
+    padding-bottom: 1rem;
+}
+
 section {
     display: flex;
     justify-content: space-between;
     margin-top: 6rem;
 }
 
-.housingCard, .costOfLivingCard, .scoreCard {
+.infoCard {
     width: 30%;
     height: 20rem;
 
@@ -116,4 +128,46 @@ section {
 
 .valueFontSize {
     font-size: var(--font-size);
+    padding-top: 1rem;
+}
+
+#errorMessageToast {
+    visibility: hidden;
+    width: 200px;
+    text-align: center;
+
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.1px solid black;
+
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+
+    background-color: #74ebd5;
+    color: black;
+}
+
+#errorMessageToast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {right: 0; opacity: 0;}
+    to {right: 40px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {right: 40px; opacity: 1;}
+    to {right: 0; opacity: 0;}
+}
+
+#illustrationDesignerText {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 4rem;
+
+    font-size: small;
 }

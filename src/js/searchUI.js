@@ -1,13 +1,39 @@
+import children_Img from "../img/childrenImg.png";
+import family_Img from "../img/familyImg.png";
+import senior_Couple_Img from "../img/seniorCoupleImg.png";
+
 const siteUI = function() {
+
+    // PAGE CONTAINERS
     const mainContainer = document.createElement('div');
     const header = document.createElement('header');
     const headerTitle = document.createElement('div');
     const searchElement = document.createElement('form');
     const searchField = document.createElement('input');
     const btnSearch = document.createElement('button');
+    const btnIcon = document.createElement('i');
     const informationContainer = document.createElement('div');
     const cityInfo = document.createElement('div');
 
+    // PAGE TITLE
+    let titleContainer = document.createElement('h1');
+    let mainTitle = document.createElement('a');
+
+    mainTitle.innerHTML = 'Quality of Life';
+    mainTitle.setAttribute('onclick', 'window.location.reload()');
+    mainTitle.setAttribute('class', 'mainTitle');
+
+    // INSTRUCTIONS
+    const appTitle = document.createElement('h2');
+    const appInstructions = document.createElement('p');
+    
+    cityInfo.style.alignItems = ("center");
+    appTitle.innerHTML = "WHAT IS YOUR CITY'S QUALITY OF LIFE?";
+    appInstructions.innerHTML = `Search for a city to see its life quality thanks to Teleport datas.<br/>
+    The overall <em>city score</em> is expressed on a scale of <strong>1 to 100.</strong><br/>
+    The <em>housing</em> and <em>cost of living</em> scores are expressed on a scale of <strong>1 to 10.</strong>`;
+
+    // ATTRIBUTES
     mainContainer.setAttribute('class', 'mainContainer');
     headerTitle.setAttribute('class', 'headerTitle');
     searchElement.setAttribute('class', 'searchElement');
@@ -17,34 +43,58 @@ const siteUI = function() {
     searchField.setAttribute('type', 'search');
     btnSearch.setAttribute('type', 'submit');
     btnSearch.setAttribute('id', 'btnSearch');
+    btnIcon.setAttribute('class', 'fa-regular fa-magnifying-glass');
     informationContainer.setAttribute('class', 'informationContainer');
     cityInfo.setAttribute('class', 'cityInfo');
     cityInfo.setAttribute('id', 'cityInfo');
+    appTitle.setAttribute('class', 'appTitle');
+    appInstructions.setAttribute('class', 'appInstructions');
 
-    let mainTitle = document.createElement('h1');
-    mainTitle.innerHTML = 'Quality of Life';
+    // INFO
+    let illustrationDesignerText = document.createElement('a');
+    illustrationDesignerText.setAttribute('id', 'illustrationDesignerText');
+    illustrationDesignerText.setAttribute('href', 'http://www.freepik.com');
+    illustrationDesignerText.innerHTML = `Illustrations designed by pch.vector / Freepik`;
+
   
-
+    // APPEND CHILDREN
     document.body.appendChild(mainContainer);
     mainContainer.append(header, informationContainer);
     header.append(headerTitle, searchElement);
     searchElement.append(searchField, btnSearch);
-    headerTitle.appendChild(mainTitle);
+    btnSearch.append(btnIcon);
+    headerTitle.appendChild(titleContainer);
+    titleContainer.appendChild(mainTitle);
 
+    // RESULTS CONTAINERS
     const infoCards = document.createElement('section');
     const housingCard = document.createElement('div');
     const costOfLivingCard = document.createElement('div');
     const scoreCard = document.createElement('div');
 
-    housingCard.setAttribute('class', 'housingCard');
-    costOfLivingCard.setAttribute('class', 'costOfLivingCard');
-    scoreCard.setAttribute('class', 'scoreCard');
+        // IMAGES
+        let childrenImg = new Image();
+        let familyImg = new Image();
+        let seniorCoupleImg = new Image();
 
-    infoCards.append(housingCard, costOfLivingCard, scoreCard);
-    informationContainer.append(cityInfo, infoCards);
+        childrenImg.src = children_Img;
+        familyImg.src = family_Img;
+        seniorCoupleImg.src = senior_Couple_Img;
+        
+        childrenImg.setAttribute('class', 'images');
+        familyImg.setAttribute('class', 'images');
+        seniorCoupleImg.setAttribute('class', 'images');
+        childrenImg.setAttribute('id', 'firstImg');
+        familyImg.setAttribute('id', 'secondImg');
+        seniorCoupleImg.setAttribute('id', 'thirdImg');
 
-    let cityLink = document.createElement('a');
-    cityInfo.appendChild(cityLink);
+        housingCard.appendChild(childrenImg);
+        costOfLivingCard.appendChild(familyImg);
+        scoreCard.appendChild(seniorCoupleImg);
+
+    housingCard.setAttribute('class', 'infoCard');
+    costOfLivingCard.setAttribute('class', 'infoCard');
+    scoreCard.setAttribute('class', 'infoCard');
 
     let housingCardTitle = document.createElement('h2');
     let housingCardValue = document.createElement('p');
@@ -61,7 +111,10 @@ const siteUI = function() {
     scoreCardValue.setAttribute('class', 'valueFontSize');
     scoreCardValue.setAttribute('id', 'scoreValue');
     scoreCardTitle.setAttribute('id', 'scoreCardTitle');
-
+    
+    infoCards.append(housingCard, costOfLivingCard, scoreCard);
+    informationContainer.append(cityInfo, infoCards, illustrationDesignerText);
+    cityInfo.append(appTitle, appInstructions);
     housingCard.append(housingCardTitle, housingCardValue);
     costOfLivingCard.append(costCardTitle, costCardValue);
     scoreCard.append(scoreCardTitle, scoreCardValue);
