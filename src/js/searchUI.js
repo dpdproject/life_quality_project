@@ -1,4 +1,4 @@
-import children_Img from "../img/childrenImg.png";
+import children_Img from "../img/ChildrenImg.png";
 import family_Img from "../img/familyImg.png";
 import senior_Couple_Img from "../img/seniorCoupleImg.png";
 
