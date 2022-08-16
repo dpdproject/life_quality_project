@@ -5,7 +5,7 @@ module.exports = {
     entry: ['./src/js/searchUI.js', './src/js/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.bundle.js',
+        filename: '[name].bundle.js'
     },
     module: {
         rules : [
@@ -22,7 +22,7 @@ module.exports = {
             {
             test: /\.png/,
             type: 'asset/resource'
-            },
+            }
         ],
     },
 };

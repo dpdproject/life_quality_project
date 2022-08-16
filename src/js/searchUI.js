@@ -98,19 +98,19 @@ const siteUI = function() {
 
     let housingCardTitle = document.createElement('h2');
     let housingCardValue = document.createElement('p');
-    housingCardValue.setAttribute('class', 'valueFontSize');
     housingCardValue.setAttribute('id', 'housingValue');
     housingCardTitle.setAttribute('id', 'housingCardTitle');
+    housingCardTitle.setAttribute('class', 'scoreTitle');
     let costCardTitle = document.createElement('h2');
     let costCardValue = document.createElement('p');
-    costCardValue.setAttribute('class', 'valueFontSize');
     costCardValue.setAttribute('id', 'costValue');
     costCardTitle.setAttribute('id', 'costCardTitle');
+    costCardTitle.setAttribute('class', 'scoreTitle');
     let scoreCardTitle = document.createElement('h2');
     let scoreCardValue = document.createElement('p');
-    scoreCardValue.setAttribute('class', 'valueFontSize');
     scoreCardValue.setAttribute('id', 'scoreValue');
     scoreCardTitle.setAttribute('id', 'scoreCardTitle');
+    scoreCardTitle.setAttribute('class', 'scoreTitle');
     
     infoCards.append(housingCard, costOfLivingCard, scoreCard);
     informationContainer.append(cityInfo, infoCards, illustrationDesignerText);

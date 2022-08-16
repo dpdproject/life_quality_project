@@ -1,6 +1,6 @@
 import '../css/style.css';
 import { kebabCase } from "lodash";
-import siteUI from "./searchUI";
+import siteUI from "./searchUI"; 
 const axios = require('axios').default;
 
 window.addEventListener("DOMContentLoaded", function() {
@@ -11,11 +11,11 @@ const searchElement = document.getElementById('searchElementForm');
 const searchField = document.getElementById('searchField');
 const cityInfo = document.getElementById('cityInfo');
 const housingCardTitle = document.getElementById('housingCardTitle');
-const housingCardValue = document.getElementById('housingValue');
+let housingCardValue = document.getElementById('housingValue');
 const costCardTitle = document.getElementById('costCardTitle');
-const costCardValue = document.getElementById('costValue');
+let costCardValue = document.getElementById('costValue');
 const scoreCardTitle = document.getElementById('scoreCardTitle');
-const scoreCardValue = document.getElementById('scoreValue');
+let scoreCardValue = document.getElementById('scoreValue');
 
 async function print(data) {
     let i = data;
@@ -26,12 +26,62 @@ async function print(data) {
         if ( i == 0 ) {
             housingCardTitle.innerHTML = `${data.categories[i].name}`;
             housingCardValue.innerHTML = `${data.categories[i].score_out_of_10.toPrecision(2)}`;
+
+            let x = `${data.categories[i].score_out_of_10.toPrecision(2)}`;
+
+            if (x <= 1) {
+                housingCardValue.classList.add('veryBadScore', 'finalScore');
+            }else if (x > 1 && x <= 3) {
+                housingCardValue.classList.add('badScore', 'finalScore');
+            }else if (x > 3 && x <= 5) {
+                housingCardValue.classList.add('mediumScore', 'finalScore');
+            }else if (x > 5  && x <= 7) {
+                housingCardValue.classList.add('acceptableScore', 'finalScore');
+            }else if (x > 7  && x <= 9) {
+                housingCardValue.classList.add('goodScore', 'finalScore');
+            }else {
+                housingCardValue.classList.add('veryGoodScore', 'finalScore');
+            };
+
         }else if ( i == 1 ) {
             costCardTitle.innerHTML = `${data.categories[i].name}`;
             costCardValue.innerHTML = `${data.categories[i].score_out_of_10.toPrecision(2)}`;
+
+            let x = `${data.categories[i].score_out_of_10.toPrecision(2)}`;
+
+            if (x <= 1) {
+                costCardValue.classList.add('veryBadScore', 'finalScore');
+            }else if (x > 1 && x <= 3) {
+                costCardValue.classList.add('badScore', 'finalScore');
+            }else if (x > 3 && x <= 5) {
+                costCardValue.classList.add('mediumScore', 'finalScore');
+            }else if (x > 5  && x <= 7) {
+                costCardValue.classList.add('acceptableScore', 'finalScore');
+            }else if (x > 7  && x <= 9) {
+                costCardValue.classList.add('goodScore', 'finalScore');
+            }else {
+                costCardValue.classList.add('veryGoodScore', 'finalScore');
+            };
+
         }else {
             scoreCardTitle.innerHTML = 'City Score';
             scoreCardValue.innerHTML = `${data.teleport_city_score.toPrecision(2)}`;
+
+            let x = `${data.teleport_city_score.toPrecision(2)}`;
+
+            if (x <= 10) {
+                scoreCardValue.classList.add('veryBadScore', 'finalScore');
+            }else if (x > 10 && x <= 30) {
+                scoreCardValue.classList.add('badScore', 'finalScore');
+            }else if (x > 30 && x <= 50) {
+                scoreCardValue.classList.add('mediumScore', 'finalScore');
+            }else if (x > 50  && x <= 70) {
+                scoreCardValue.classList.add('acceptableScore', 'finalScore');
+            }else if (x > 70  && x <= 90) {
+                scoreCardValue.classList.add('goodScore', 'finalScore');
+            }else {
+                scoreCardValue.classList.add('veryGoodScore', 'finalScore');
+            };
         }
     };
 };
@@ -44,8 +94,11 @@ async function get (url, city) {
         let cleaningFunction = () => {
             cityInfo.innerHTML = "";
             housingCardValue.innerHTML = "";
+            housingCardValue.removeAttribute('class');
             costCardValue.innerHTML = "";
+            costCardValue.removeAttribute('class');
             scoreCardValue.innerHTML = "";
+            scoreCardValue.removeAttribute('class');
             housingCardTitle.innerHTML = "";
             costCardTitle.innerHTML = "";
             scoreCardTitle.innerHTML = "";

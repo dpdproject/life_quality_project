@@ -22,7 +22,7 @@ body {
 
     background-image: linear-gradient(
         to bottom right,
-        #74ebd5 30%, 
+        #74ebd5 50%, 
         #9face6 100%);
 }
 
@@ -126,11 +126,6 @@ section {
     font-size: large;
 }
 
-.valueFontSize {
-    font-size: var(--font-size);
-    padding-top: 1rem;
-}
-
 #errorMessageToast {
     visibility: hidden;
     width: 200px;
@@ -170,4 +165,46 @@ section {
     margin-top: 4rem;
 
     font-size: small;
+}
+
+/* COLOR RESULTS */
+
+.scoreTitle {
+    padding-bottom: 4rem;
+}
+
+.finalScore{
+    font-size: var(--font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.veryBadScore {
+    color: purple;
+    background-color: rgba(221, 221, 221, 0.52);
+}
+.badScore {
+    color: red;
+    background-color: rgba(221, 221, 221, 0.52);
+}
+.mediumScore {
+    color: orange;
+    background-color: rgba(221, 221, 221, 0.52);
+}
+.acceptableScore {
+    color: yellow;
+    background-color: rgba(221, 221, 221, 0.52);
+}
+.goodScore {
+    color: greenyellow;
+    background-color: rgba(194, 194, 194, 0.52);
+}
+.veryGoodScore {
+    color: rgb(10, 101, 10);    
+    background-color: rgba(194, 194, 194, 0.52);
 }
