@@ -22,8 +22,8 @@ body {
 
     background-image: linear-gradient(
         to bottom right,
-        rgb(116, 235, 213) 50%, 
-        rgb(159, 172, 230) 100%);
+        #076585, 
+        #FFFFFF);
 }
 
 .images {
