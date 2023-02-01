@@ -162,9 +162,7 @@ section {
 #illustrationDesignerText {
     display: flex;
     justify-content: center;
-
     margin-top: 4rem;
-
     font-size: small;
 }
 
@@ -185,35 +183,28 @@ section {
     height: 100px;
 }
 
+.veryBadScore, .badScore, .mediumScore, .acceptableScore, .goodScore, .veryGoodScore {
+    background-color: rgba(221, 221, 221, 0.52);
+}
+
 .veryBadScore {
     color: purple;
-    background-color: rgba(221, 221, 221, 0.52);
 }
 .badScore {
     color: red;
-    background-color: rgba(221, 221, 221, 0.52);
 }
 .mediumScore {
     color: orange;
-    background-color: rgba(221, 221, 221, 0.52);
 }
 .acceptableScore {
     color: yellow;
-    background-color: rgba(221, 221, 221, 0.52);
 }
 .goodScore {
     color: greenyellow;
-    background-color: rgba(194, 194, 194, 0.52);
 }
 .veryGoodScore {
-    color: rgb(10, 101, 10);    
-    background-color: rgba(194, 194, 194, 0.52);
+    color: rgb(10, 101, 10);
 }
-
-
-
-
-
 
 @media screen and (max-width: 900px) {
     .mainContainer {
