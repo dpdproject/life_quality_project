@@ -33,7 +33,7 @@ body {
 
 .mainContainer {
     height: 100vh;
-    width:  80%;
+    width: 80%;
 }
 
 header {
@@ -208,4 +208,43 @@ section {
 .veryGoodScore {
     color: rgb(10, 101, 10);    
     background-color: rgba(194, 194, 194, 0.52);
+}
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .informationContainer {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .cityInfo {
+        height: auto;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .infoCard {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .mainContainer {
+        height: 200vh;
+    }
 }
