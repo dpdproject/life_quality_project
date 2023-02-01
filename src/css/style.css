@@ -31,102 +31,6 @@ body {
     width: 80%;
 }
 
-
-@media screen and (max-width: 700px) {
-
-    .mainContainer {
-        width: 90%;
-    }
-
-    header {
-        display: flex;
-        flex-direction: column;
-    
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    .searchElement {
-        display: flex;
-        align-items: center;
-    }
-    
-    input {
-        height: 2rem;
-        width: 10rem;
-        border: 1px solid rgb(127, 127, 127);
-        border-radius: 10px;
-    
-        font-size: medium;
-        padding: 8px;
-    }
-    
-    .mainTitle {
-        cursor: pointer;
-    }
-    
-    #btnSearch {
-        height: 2rem;
-        width: 2rem;
-        margin-left: 1rem;
-        background-color: transparent;
-        border: var(--border);
-        border-radius: var(--border-radius);
-    
-        cursor: pointer;
-    }
-
-    .informationContainer {
-        width: 100%;
-    }
-
-    .cityInfo {
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    
-        background: linear-gradient(
-            to bottom right,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.7));
-        box-shadow: var(--shadow);
-        border: var(--border);
-        border-radius: var(--border-radius);
-    }
-    
-    .appTitle {
-        padding-bottom: 1rem;
-    }
-
-    section {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 3rem;
-    }
-
-    .infoCard {
-        width: 30%;
-        height: 20rem;
-    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-        background: linear-gradient(
-            to bottom right,
-            rgba(255, 255, 255, 0.2),
-            rgba(255, 255, 255, 0.9));
-        border: var(--border);
-        border-radius: var(--border-radius);
-    
-        font-size: large;
-    }
-}
-
-
 .mainContainer {
     height: 100vh;
     width:  80%;
@@ -135,24 +39,93 @@ body {
 header {
     min-height: 15%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
+.searchElement {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    height: 2rem;
+    min-width: 20rem;
+    border: 1px solid rgb(127, 127, 127);
+    border-radius: 10px;
+
+    font-size: medium;
+    padding: 8px;
+}
+
+.mainTitle {
+    cursor: pointer;
+}
+
+#btnSearch {
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1rem;
+    background-color: transparent;
+    border: var(--border);
+    border-radius: var(--border-radius);
+
+    cursor: pointer;
+}
+
 .informationContainer {
+    width: 100%;
     height: 50rem;
+
     padding: 3rem 3rem 0 3rem;
+}
+
+.cityInfo {
+    width: 100% ;
+    height: 30%;
+
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.7));
+    box-shadow: var(--shadow);
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.appTitle {
+    padding-bottom: 1rem;
 }
 
 section {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     margin-top: 6rem;
 }
 
+.infoCard {
+    width: 30%;
+    height: 20rem;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.9));
+    border: var(--border);
+    border-radius: var(--border-radius);
+
+    font-size: large;
+}
 
 #errorMessageToast {
     visibility: hidden;
@@ -195,9 +168,6 @@ section {
     font-size: small;
 }
 
-
-
-
 /* COLOR RESULTS */
 
 .scoreTitle {
@@ -215,31 +185,27 @@ section {
     height: 100px;
 }
 
-.veryBadScore, .badScore, .mediumScore, .acceptableScore, .goodScore, .veryGoodScore {
+.veryBadScore {
+    color: purple;
     background-color: rgba(221, 221, 221, 0.52);
 }
-
-.veryBadScore {
-    color: #800080;
-    border-color: #800080;
-}
 .badScore {
-    color: #ff0000;
-    border-color: #ff0000;
+    color: red;
+    background-color: rgba(221, 221, 221, 0.52);
 }
 .mediumScore {
-    color: #ffa500;
-    border-color: #ffa500;
+    color: orange;
+    background-color: rgba(221, 221, 221, 0.52);
 }
 .acceptableScore {
-    color: #ffff00;
-    border-color: #ffff00;
+    color: yellow;
+    background-color: rgba(221, 221, 221, 0.52);
 }
 .goodScore {
-    color: #adff2f;
-    border-color: #adff2f;
+    color: greenyellow;
+    background-color: rgba(194, 194, 194, 0.52);
 }
 .veryGoodScore {
-    color: #0a650a;
-    border-color: #0a650a;
+    color: rgb(10, 101, 10);    
+    background-color: rgba(194, 194, 194, 0.52);
 }
