@@ -40,6 +40,7 @@ const siteUI = function() {
     searchElement.setAttribute('id', 'searchElementForm');
     searchField.setAttribute('placeholder', 'Search for a city')
     searchField.setAttribute('id', 'searchField');
+    searchField.setAttribute('class', 'searchField');
     searchField.setAttribute('type', 'search');
     btnSearch.setAttribute('type', 'submit');
     btnSearch.setAttribute('id', 'btnSearch');

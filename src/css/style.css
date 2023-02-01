@@ -5,6 +5,11 @@
 
     --font: 'Quicksand', 'sans-serif';
     --font-size: 40pt;
+
+    --background-color: linear-gradient(
+        to bottom right,
+        rgba(7, 102, 133, 0.573),
+        rgb(255, 255, 255));
 }
 
 * {
@@ -17,13 +22,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-family: var(--font);
-
-    background-image: linear-gradient(
-        to bottom right,
-        #076585, 
-        #FFFFFF);
+    background-color: #FFFFFF;
 }
 
 .images {
@@ -33,7 +33,7 @@ body {
 
 .mainContainer {
     height: 100vh;
-    width: 80%;
+    width: 90%;
 }
 
 header {
@@ -89,10 +89,7 @@ input {
     flex-direction: column;
     justify-content: center;
 
-    background: linear-gradient(
-        to bottom right,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.7));
+    background: var(--background-color);
     box-shadow: var(--shadow);
     border: var(--border);
     border-radius: var(--border-radius);
@@ -117,10 +114,7 @@ section {
     align-items: center;
     justify-content: center;
 
-    background: linear-gradient(
-        to bottom right,
-        rgba(255, 255, 255, 0.2),
-        rgba(255, 255, 255, 0.9));
+    background: var(--background-color);
     border: var(--border);
     border-radius: var(--border-radius);
 
@@ -206,21 +200,35 @@ section {
     color: rgb(10, 101, 10);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     .mainContainer {
-        height: 200vh;
-        width: 90%;
+        height: auto;
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    .searchElement {
+        padding-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainContainer {
+        height: auto;
+        width: 100%;
+        padding-top: 1rem;
     }
 
     header {
         display: flex;
         flex-direction: column;
-        max-width: 80%;
+        max-width: 90%;
+        min-height: 7%;
         margin: 0 auto;
     }
 
-    input {
-        max-width: 15rem;
+    .searchField {
+        min-width: 1.5rem;
     }
 
     .informationContainer {
@@ -236,7 +244,7 @@ section {
     section {
         display: flex;
         flex-direction: column;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
     .infoCard {
